@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/TESTS/text.css">
+    <link rel="icon" type="image/jpeg" href="/pics/Updated DPS.png">
+    <title>Subject Selection - Duvazi Educational Centre</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+                <div class="logo-text">
+                    <h1>Duvazi Educational Centre</h1>
+                    <p>Excellence in Education Since 2025</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+                    <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+                    <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="/DATABASES/signup.html" class="btn btn-apply"><i class="fas fa-edit"></i> Apply Now</a>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Search...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="application">
+        <div class="application-container">
+           <div class="application-reminder">
+             <h1><i class="fas fa-pencil-alt"></i> Subject Selection Portal</h1>
+             <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Important Reminders:</strong></p>
+                <ul>
+                    <li>Some subjects are not yet available as we don't have facilitators for those courses</li>
+                    <li>First-time applicants must choose at least 1 home language and 1 additional language</li>
+                    <li>Minimum of 5 subjects required for full-time enrollment</li>
+                </ul>
+             </div>
+           </div>
+
+           <form id="subjectSelectionForm" action="/submit-application" method="post">
+              <div class="form-section">
+                <h3><i class="fas fa-stream"></i> Choose Your Stream</h3>
+                <div class="notification-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Note that there are some subjects missing. Contact our <a href="/HTML/contact.html">IT help desk</a> if you need assistance.</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="homeLanguage"><i class="fas fa-language"></i> Home Language</label>
+                    <select id="homeLanguage" name="homeLanguage" required>
+                        <option value="">-- Select Home Language --</option>
+                        <option value="english">English Home Language</option>
+                        <option value="xitsonga">Xitsonga Home Language</option>
+                        <option value="afrikaans">Afrikaans Home Language</option>
+                        <option value="zulu">IsiZulu Home Language</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalLanguage"><i class="fas fa-language"></i> First Additional Language</label>
+                    <select id="additionalLanguage" name="additionalLanguage" required>
+                        <option value="">-- Select Additional Language --</option>
+                        <option value="english">English First Additional</option>
+                        <option value="xitsonga">Xitsonga First Additional</option>
+                        <option value="afrikaans">Afrikaans First Additional</option>
+                        <option value="zulu">IsiZulu First Additional</option>
+                        <option value="french">French First Additional</option>
+                    </select>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3><i class="fas fa-book"></i> Core Subjects</h3>
+                <div class="subject-grid">
+                    <div class="form-group">
+                        <label for="coreSubject1">Core Subject 1 (Required)</label>
+                        <select id="coreSubject1" name="coreSubject1" required>
+                            <option value="">-- Select Core Subject --</option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="maths_lit">Mathematical Literacy</option>
+                            <option value="life_orientation">Life Orientation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coreSubject2">Core Subject 2 (Required)</label>
+                        <select id="coreSubject2" name="coreSubject2" required>
+                            <option value="">-- Select Core Subject --</option>
+                            <option value="life_sciences">Life Sciences</option>
+                            <option value="physical_science">Physical Science</option>
+                            <option value="geography">Geography</option>
+                        </select>
+                    </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3><i class="fas fa-ellipsis-h"></i> Elective Subjects</h3>
+                <p class="form-instruction">Select at least 3 elective subjects</p>
+                <div class="subject-grid">
+                    <div class="form-group">
+                        <label for="elective1">Elective 1</label>
+                        <select id="elective1" name="elective1">
+                            <option value="">-- Select Elective --</option>
+                            <option value="accounting">Accounting</option>
+                            <option value="business">Business Studies</option>
+                            <option value="economics">Economics</option>
+                            <option value="history">History</option>
+                            <option value="tourism">Tourism</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="elective2">Elective 2</label>
+                        <select id="elective2" name="elective2">
+                            <option value="">-- Select Elective --</option>
+                            <option value="dramatic_arts">Dramatic Arts</option>
+                            <option value="music">Music</option>
+                            <option value="visual_arts">Visual Arts</option>
+                            <option value="design">Design</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="elective3">Elective 3</label>
+                        <select id="elective3" name="elective3">
+                            <option value="">-- Select Elective --</option>
+                            <option value="computer_science">Computer Science</option>
+                            <option value="it">Information Technology</option>
+                            <option value="engineering">Engineering Graphics</option>
+                            <option value="agriculture">Agricultural Science</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="elective4">Elective 4 (Optional)</label>
+                        <select id="elective4" name="elective4">
+                            <option value="">-- Optional Subject --</option>
+                            <option value="religion">Religion Studies</option>
+                            <option value="consumer">Consumer Studies</option>
+                            <option value="hospitality">Hospitality Studies</option>
+                        </select>
+                    </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3><i class="fas fa-certificate"></i> Additional Options</h3>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="extracurricular" name="extracurricular">
+                    <label for="extracurricular">I'm interested in extracurricular activities</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="boarding" name="boarding">
+                    <label for="boarding">I'm interested in boarding facilities</label>
+                </div>
+              </div>
+
+              <div class="terms-and-services">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="/terms.html" target="_blank">Terms and Conditions</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a> of Duvazi Educational Centre</label>
+                </div>
+              </div>
+              
+              <div class="form-actions">
+                <button type="reset" class="btn btn-secondary"><i class="fas fa-undo"></i> Reset Form</button>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Submit Application</button>
+              </div>
+           </form>
+        </div>
+    </section>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+            <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+            <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="/DATABASES/signup.html" class="mobile-apply-btn"><i class="fas fa-edit"></i> Apply Now</a>
+        </div>
+        <div class="mobile-search-container">
+            <input type="text" placeholder="Search...">
+            <button class="mobile-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+ 
+    <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const menuOverlay = document.createElement('div');
+    menuOverlay.classList.add('menu-overlay');
+    document.body.appendChild(menuOverlay);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Form validation
+    document.getElementById('subjectSelectionForm').addEventListener('submit', function(e) {
+        const homeLang = document.getElementById('homeLanguage').value;
+        const addLang = document.getElementById('additionalLanguage').value;
+        
+        if (homeLang === addLang) {
+            e.preventDefault();
+            alert('Your home language and additional language cannot be the same.');
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/STYLES/about.css">
+    <link rel="icon" type="image/jpeg" href="/pics/Updated DPS.png">
+    <title>Origin of Duvazi Private School</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+                <div class="logo-text">
+                    <h1>Duvazi Private School</h1>
+                    <p>Excellence in Education Since 2025</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+                    <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+                    <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="/DATABASES/signup.html" class="btn btn-apply"><i class="fas fa-edit"></i> Apply Now</a>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Search...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+     <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="pics/Updated DPS.png" alt="Duvazi Logo">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+            <a href="HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+            <a href="HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="/DATABASES/signup.html" class="mobile-apply-btn"><i class="fas fa-edit"></i> Apply Now</a>
+        </div>
+        <div class="mobile-search-container">
+            <input type="text" placeholder="Search...">
+            <button class="mobile-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+ 
+    <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const menuOverlay = document.createElement('div');
+    menuOverlay.classList.add('menu-overlay');
+    document.body.appendChild(menuOverlay);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+</script>
+<script src="/main.js"></script>
+</body>
+</html>

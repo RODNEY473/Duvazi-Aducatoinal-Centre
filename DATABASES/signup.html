@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" type="image/jpeg" href="/pics/Updated DPS.png">
+    <title>Application Center</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+                <div class="logo-text">
+                    <h1>Duvazi Private School</h1>
+                    <p>Excellence in Education Since 2025</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+                    <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+                    <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="/HTML/login.html" class="btn btn-apply"><i class="fas fa-edit"></i> Login</a>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Search...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="signup-section">
+        <div class="signup-form"> 
+            <form method="post" action="connect.php">
+                <h1>Create an Account</h1>
+                <p id="sub">Join us to get the best Educational Exprience</p>
+
+                <div class="input-field">
+                    <p><i class="fas fa-user-circle"></i> Name</p>
+                    <input type="text" placeholder="Name" name="name" required>
+                </div>
+
+                <div class="input-field">
+                    <p for="surname"><i class="fas fa-user-circle"></i> Surname</p>
+                    <input id="surname" type="text" placeholder="Surname" name="surname" required>
+                </div>
+
+                <div class="input-field">
+                    <p><i class="fas fa-calendar"></i> South African ID/Passport</p>
+                    <input type="number" placeholder="South African ID/Passport" name="identifcation" id="identifcation">
+                </div>
+
+                <div class="input-field">
+                    <p><i class="fas fa-envelope"></i> Email</p>
+                    <input type="email" id="email" placeholder="Email" name="Email" required>
+                </div>
+
+                <div class="input-field">
+                    <p><i class="fas fa-phone"></i> Phone</p>
+                    <input type="tel" name="Phone" id="phone" placeholder="123 456 7890">
+                </div>
+
+                <div class="input-field">
+                    <p><i class="fas fa-lock"></i> Password</p>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                </div>
+
+                <div class="input-field">
+                    <p><i class="fas fa-lock"></i> Confirm Password</p>
+                    <input type="password" placeholder="Confirm Password" id="confirmPassord" name="confirmPassord" required>
+                </div>
+                
+                <div class="checkbox-field" style="padding: 5px;">
+                   <h4>Gender</h4>
+                    <input type="radio" class="gender1" value="m" name="gender" required>Male
+                    <input type="radio" class="gender1" value="f" name="gender" required>Female                   
+                    <input type="radio" class="gender1" value="o" name="gender" required>Others
+                </div>
+                <div class="signup">
+                    <button type="submit" class="btn-apply" value="submit" id="button" href="/HTML/applications.html">Submit</button>
+                </div>
+                 <h4>Alredy Have an Account <a href="/HTML/login.html">Login here</a></h4>
+                    <div class="media">
+                      <a href=""><i class="fab fa-facebook-f"></i></a>
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href=""><i class="fab fa-twitter"></i></a>
+                      <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+            <p id="ter">&COPY; 2025 Duvazi Private School All Rights Reserved <a href="">Privacy Policy</a> | <a href="">Terms of Service</a> | <a href="">Sitemap</a></p>
+    </footer>
+
+     <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+            <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+            <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="/HTML/applications.html" class="mobile-apply-btn"><i class="fas fa-edit"></i> Apply Now</a>
+        </div>
+        <div class="mobile-search-container">
+            <input type="text" placeholder="Search...">
+            <button class="mobile-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const menuOverlay = document.createElement('div');
+    menuOverlay.classList.add('menu-overlay');
+    document.body.appendChild(menuOverlay);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });  
+</script>
+<script src="/main.js"></script>
+</body>
+</html>

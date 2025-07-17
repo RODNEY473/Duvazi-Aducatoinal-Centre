@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/STYLES/applications.css">
+    <link rel="icon" type="image/jpeg" href="/pics/Updated DPS.png">
+    <title>Applications</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+                <div class="logo-text">
+                    <h1>Duvazi Private School</h1>
+                    <p>Excellence in Education Since 2025</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+                    <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+                    <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="/DATABASES/signup.html" class="btn btn-apply"><i class="fas fa-edit"></i> Apply Now</a>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Search...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="application">
+        <div class="application-container">
+           <div class="application-reminder">
+             <h1>Welcome to our application site</h1>
+             <p><Strong>Reminder</Strong>: Some of the subjects are not yet available as we don't have any facilitators for those certain subjects.</p>
+             <p>If it's your first time applying make sure to choose at least 1 home language and 1 ist additional language.</p>
+
+           </div>
+
+           <form action="" method="get">
+              <h3>Choose your Streams</h3>
+              <p id="notification">Note that there are some subjects missing. Contact our IT help desk if you need some assistant.</p>
+              <h5>Choose Your Home Language</h5>
+              <input list="languages" placeholder="Select">
+              <datalist id="languages">
+                <option value="English"></option>
+                <option value="Xitsonga"></option>
+                <option value="English 1st Additional language"></option>
+                <option value="Xitsonga 1st Additional language"></option>
+              </datalist>
+
+              <h5>Choose your additional language</h5>
+              <input list="languages" placeholder="Select">
+              <datalist id="languages">
+                <option value="English"></option>
+                <option value="Xitsonga"></option>
+                <option value="English 1st Additional Language"></option>
+                <option value="Xitsonga 1st Additional Language"></option>
+              </datalist><br>
+
+              <h5>Choose subjects that you will be studying: </h5>
+              <input list="subjects" placeholder="Select">
+              <datalist id="subjects">
+                <option value="Accounting"></option>
+                <option value="Mathematics"></option>
+                <option value="Life Science"></option>
+                <option value="Life Orientation"></option>
+                <option value="Physcical Science"></option>
+              </datalist><br>
+
+              <input list="" placeholder="Select">
+              <datalist>
+                <option value="Accounting"></option>
+                <option value="Mathematics"></option>
+                <option value="Life Science"></option>
+                <option value="Life Orientation"></option>
+                <option value="Physcical Science"></option>
+                <option value=""></option>
+              </datalist><br>
+              
+              <input list="" placeholder="Select">
+              <datalist>
+                <option value="Accounting"></option>
+                <option value="Mathematics"></option>
+                <option value="Life Science"></option>
+                <option value="Life Orientation"></option>
+                <option value="Physcical Science"></option>
+                <option value=""></option>
+              </datalist><br>
+
+              <input list="" placeholder="Select">
+              <datalist>
+                <option value="Accounting"></option>
+                <option value="Mathematics"></option>
+                <option value="Life Science"></option>
+                <option value="Life Orientation"></option>
+                <option value="Physcical Science"></option>
+                <option value=""></option>
+              </datalist><br>
+
+              <input list="" placeholder="Select">
+              <datalist>
+                <option value="Accounting"></option>
+                <option value="Mathematics"></option>
+                <option value="Life Science"></option>
+                <option value="Life Orientation"></option>
+                <option value="Physcical Science"></option>
+                <option value=""></option>
+              </datalist><br>
+
+           </form>
+
+           <div class="terms-and-services">
+             <p><input type="checkbox"> By clicking here you agree to our <a href="">Terms </a>and <a href="">Services</a></p>
+           </div>
+            
+        </div>
+    </section>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+            <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+            <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="/DATABASES/signup.html" class="mobile-apply-btn"><i class="fas fa-edit"></i> Apply Now</a>
+        </div>
+        <div class="mobile-search-container">
+            <input type="text" placeholder="Search...">
+            <button class="mobile-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+ 
+    <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const menuOverlay = document.createElement('div');
+    menuOverlay.classList.add('menu-overlay');
+    document.body.appendChild(menuOverlay);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+</script>
+<script src="/main.js"></script>
+</body>
+</html>

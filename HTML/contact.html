@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Duvazi Private School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/STYLES/contact.css">
+    <link rel="icon" type="image/jpeg" href="/pics/Updated DPS.png">
+</head>
+<body>
+   <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <p><i class="fas fa-bell"></i> Admissions now open for 2025-2026 academic year</p>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+                <div class="logo-text">
+                    <h1>Duvazi Private School</h1>
+                    <p>Excellence in Education Since 2025</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <div class="nav-links">
+                    <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+                    <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+                    <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="/DATABASES/signup.html" class="btn btn-apply"><i class="fas fa-edit"></i> Apply Now</a>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Search...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="contact-container slide-up">
+            <h1 class="fade-in"><i class="fas fa-envelope"></i> Contact Duvazi Private School</h1>
+            
+            <div class="contact-info">
+                <h2><i class="fas fa-info-circle"></i> How to Reach Us</h2>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> nfo@duvazi.edu.com</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +27 63 472 8641</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Education Street, Giyani, 1826</p>
+                <p><i class="fas fa-clock"></i> <strong>Opening Hours:</strong> Monday-Friday: 7:30 AM - 4:00 PM</p>
+            </div>
+            
+            <div class="contact-form slide-up">
+                <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="social-media slide-up">
+                <h2><i class="fas fa-share-alt"></i> Connect With Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61575002447743" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/feast7338?igsh=MXNtczhsbHJzdzQzeg==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/AndFeast71232?t=0C52Ma__YfMS3xKBH-6p0Q&s=09" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Mobile Menu (hidden by default) -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <img src="/pics/Updated DPS.png" alt="Duvazi Logo">
+            <div class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="/index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="/HTML/about.html"><i class="fas fa-history"></i> About</a>
+            <a href="/HTML/academics.html"><i class="fas fa-book-open"></i> Academics</a>
+            <a href="/HTML/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="/DATABASES/signup.html" class="mobile-apply-btn"><i class="fas fa-edit"></i> Apply Now</a>
+        </div>
+        <div class="mobile-search-container">
+            <input type="text" placeholder="Search...">
+            <button class="mobile-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    
+   
+    
+   <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const menuOverlay = document.createElement('div');
+    menuOverlay.classList.add('menu-overlay');
+    document.body.appendChild(menuOverlay);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+</script>
+<script src="/main.js"></script>
+</body>
+</html>
