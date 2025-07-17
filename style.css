@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-size: 1.1rem;
 }
 
 body {
@@ -31,8 +32,7 @@ h1, h2, h3, h4 {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -76,7 +76,7 @@ h1, h2, h3, h4 {
 }
 
 .logo img {
-    height: 100px;
+    height: 150px;
     width: fit-content;
     border-radius: 50%;
     margin-right: 10px;
@@ -86,7 +86,7 @@ h1, h2, h3, h4 {
 
 .logo-text h1 {
     color: var(--dark);
-    font-size: 24px;
+    font-size: 1.7rem;
     margin-bottom: 5px;
 }
 
@@ -116,6 +116,7 @@ h1, h2, h3, h4 {
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
+    text-size: ;
 }
 
 .navbar a i {
